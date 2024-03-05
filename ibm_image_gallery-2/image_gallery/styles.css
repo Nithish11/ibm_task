@@ -1,0 +1,34 @@
+.gallery {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  
+  .image {
+    width: 200px;
+    margin: 10px;
+    cursor: pointer;
+    border: 2px solid #ddd; /* Add border design */
+    border-radius: 10px; /* Add border radius for rounded corners */
+    overflow: hidden; /* Hide overflow content (border) */
+  }
+  
+  .image img {
+    width: 100%;
+    height: auto;
+  }
+  
+  .details {
+    display: none;
+    padding: 20px;
+    border: 1px solid #ccc;
+    margin-top: 20px;
+  }
+  
+  .details h2 {
+    margin-top: 0;
+  }
+  
+  button {
+    cursor: pointer;
+  }
+  

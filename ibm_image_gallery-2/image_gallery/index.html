@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Interactive Image Gallery</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body ng-app="galleryApp" ng-controller="GalleryController as gallery">
+  <center><h1>NatureGallery</h1></center>
+  <div class="gallery">
+    <div class="image" ng-repeat="image in gallery.images" ng-click="gallery.showDetails(image)">
+      <img ng-src="{{ image.src }}" alt="{{ image.alt }}">
+    </div>
+  </div>
+
+  <div class="details" ng-show="gallery.selectedImage">
+    <h2>{{ gallery.selectedImage.title }}</h2>
+    <p>{{ gallery.selectedImage.description }}</p>
+    <button ng-click="gallery.closeDetails()">Close</button>
+  </div>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
