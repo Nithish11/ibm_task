@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="dashboardApp">
+<head>
+  <meta charset="UTF-8">
+  <title>Real-time Dashboard Analytics</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body ng-controller="DashboardController as dashboard">
+  <header>
+    <h1> Dashboard Analytics</h1>
+    <!-- Navigation elements can go here -->
+  </header>
+  <img src="01.png">
+
+  <div class="dashboard-container">
+    <!-- Chart or Graph Sections -->
+    <div class="chart-section">
+      <canvas id="chart1"></canvas>
+    </div>
+    <div class="chart-section">
+      <canvas id="chart2"></canvas>
+    </div>
+    <!-- Add more chart sections as needed -->
+    
+    <!-- Additional Dashboard Components -->
+    <!-- Example: Real-time data updates -->
+    <div class="real-time-data">
+      <p>Last updated: {{ dashboard.lastUpdated }}</p>
+    </div>
+  </div>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
