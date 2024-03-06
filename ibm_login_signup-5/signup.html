@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="authApp">
+<head>
+    <meta charset="UTF-8">
+    <title>User Authentication System</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div ng-view></div>
+    <div class="container">
+        <h2>Sign Up</h2>
+        <form ng-submit="signupCtrl.submitSignup()">
+            <div class="form-group">
+                <label for="fullName">Full Name</label>
+                <input type="text" id="fullName" ng-model="signupCtrl.fullName" required>
+            </div>
+            <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" id="email" ng-model="signupCtrl.email" required>
+            </div>
+            <div class="form-group">
+                <label for="password">Password</label>
+                <input type="password" id="password" ng-model="signupCtrl.password" required>
+            </div>
+            <div class="form-group">
+                <label for="confirmPassword">Confirm Password</label>
+                <input type="password" id="confirmPassword" ng-model="signupCtrl.confirmPassword" required>
+            </div>
+            <button type="submit" class="btn"><a href="login.html">Sign Up</a></button>
+        </form>
+    </div>
+    
+
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular-route.min.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>
